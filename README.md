@@ -1,6 +1,6 @@
 # E-Season
 
-**E-Season** is a mobile and web-based application designed to modernize the process of purchasing and managing train season tickets in Sri Lanka. The platform enables passengers to purchase tickets online, reducing wait times and improving convenience. A dedicated web application also empowers railway staff to manage ticketing, validate tickets, and access real-time passenger data, enhancing operational efficiency.
+**E-Season** is a mobile and web-based application designed to modernize the process of purchasing and managing train season tickets in Sri Lanka. The platform enables passengers to purchase season tickets online, reducing wait times and improving convenience. A dedicated web application also empowers railway staff to manage ticketing, validate tickets, and access real-time passenger data, enhancing operational efficiency.
 
 ## Table of Contents
 
@@ -19,7 +19,7 @@
 
 ## Introduction
 
-Sri Lanka Railways currently operates a manual ticketing system, causing delays and increasing the workload on railway staff. **E-Season** addresses these challenges by introducing a mobile application for passengers and a web-based application for railway staff, streamlining the ticketing process, enhancing user experience, and improving operational efficiency.
+Sri Lanka Railways currently operates a manual seasoning system, causing delays and increasing the workload on railway staff. **E-Season** addresses these challenges by introducing a mobile application for passengers and a web-based application for railway staff, streamlining the seasoning process, enhancing user experience, and improving operational efficiency.
 
 ## Problem Statement
 
@@ -28,8 +28,8 @@ The existing manual ticketing system for train season passes leads to long queue
 ## Objectives
 
 1. **Improve Convenience**: Allow passengers to buy season tickets digitally, reducing the need to queue at counters.
-2. **Enhance Efficiency**: Provide railway staff with a web application to manage tickets, validate purchases, and monitor real-time passenger data.
-3. **Automate Operations**: Simplify ticketing processes and reduce manual intervention, decreasing human errors.
+2. **Enhance Efficiency**: Provide railway staff with a web application to manage seasons, validate purchases, and monitor real-time passenger data.
+3. **Automate Operations**: Simplify seasoning processes and reduce manual intervention, decreasing human errors.
 4. **Enhance User Experience**: Offer intuitive and accessible user interfaces for passengers and staff.
 
 ## Features

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # eseason
 
 A new Flutter project.
@@ -16,6 +17,8 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 =======
+=======
+>>>>>>> 0340cd90eca6268090b66417fc6bb2ded7f80c56
 # E-Season
 
 **E-Season** is a mobile and web-based application designed to modernize the process of purchasing and managing train season tickets in Sri Lanka. The platform enables passengers to purchase season tickets online, reducing wait times and improving convenience. A dedicated web application also empowers railway staff to manage ticketing, validate tickets, and access real-time passenger data, enhancing operational efficiency.
@@ -205,4 +208,7 @@ Contributions are welcome! To contribute:
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+<<<<<<< HEAD
+>>>>>>> 0340cd90eca6268090b66417fc6bb2ded7f80c56
+=======
 >>>>>>> 0340cd90eca6268090b66417fc6bb2ded7f80c56

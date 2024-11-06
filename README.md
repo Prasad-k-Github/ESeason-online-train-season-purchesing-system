@@ -1,7 +1,3 @@
-To update your README file reflecting the change to **Flutter**, **Firebase**, and **MySQL** as your tech stack, here’s an updated version:
-
----
-
 # E-Season
 
 **E-Season** is a mobile and web-based application designed to modernize the process of purchasing and managing train season tickets in Sri Lanka. The platform enables passengers to purchase season tickets online, reducing wait times and improving convenience. A dedicated web application also empowers railway staff to manage ticketing, validate tickets, and access real-time passenger data, enhancing operational efficiency.

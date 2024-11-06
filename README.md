@@ -1,24 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-# eseason
+To update your README file reflecting the change to **Flutter**, **Firebase**, and **MySQL** as your tech stack, here’s an updated version:
 
-A new Flutter project.
+---
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-=======
-=======
->>>>>>> 0340cd90eca6268090b66417fc6bb2ded7f80c56
 # E-Season
 
 **E-Season** is a mobile and web-based application designed to modernize the process of purchasing and managing train season tickets in Sri Lanka. The platform enables passengers to purchase season tickets online, reducing wait times and improving convenience. A dedicated web application also empowers railway staff to manage ticketing, validate tickets, and access real-time passenger data, enhancing operational efficiency.
@@ -89,13 +72,13 @@ The existing manual ticketing system for train season passes leads to long queue
 
 E-Season utilizes a distributed architecture with separate components for mobile and web applications:
 
-- **Backend**: A unified backend, built with Spring Boot and Node.js, handles authentication, ticket management, and real-time data.
-- **Frontend - Mobile App**: Developed with React Native, it provides an interactive experience for passengers on both iOS and Android.
-- **Frontend - Web App**: Developed using React or Angular, offering a robust interface for railway staff to manage ticketing and passenger interactions.
+- **Mobile App**: Developed with **Flutter** for both iOS and Android to provide an interactive experience for passengers.
+- **Backend**: A unified backend, built with **Node.js**, handles authentication, ticket management, and real-time data.
+- **Frontend - Web App**: Developed using **React** (or Angular), offering a robust interface for railway staff to manage ticketing and passenger interactions.
 
 ### Database Structure
 
-The backend uses a SQL database, storing essential data in multiple tables:
+The backend uses **MySQL**, storing essential data in multiple tables:
 
 - **Users**: Stores profiles, roles, and authentication data for passengers and railway staff.
 - **Tickets**: Contains ticket availability, purchase history, and associated route data.
@@ -103,12 +86,13 @@ The backend uses a SQL database, storing essential data in multiple tables:
 
 ## Technologies Used
 
-- **Mobile Frontend**: React Native, Redux, Expo
-- **Web Frontend**: React or Angular for the web application
-- **Backend**: Spring Boot (Java) and Node.js (JavaScript) for microservices
-- **Database**: PostgreSQL (or preferred SQL database)
+- **Mobile app**: Flutter
+- **Web Frontend**: react.js or Angular
+- **Web Backend**: Node.js
+- **Database**: MySQL
+- **Authentication**: Firebase Authentication
+- **Push Notifications**: Firebase Cloud Messaging for mobile push notifications
 - **Payment Integration**: Stripe or PayPal for secure transactions
-- **Notifications**: Firebase Cloud Messaging for mobile push notifications
 - **Security**: Multi-factor authentication (MFA), encryption for data privacy
 
 ## User Stories
@@ -122,10 +106,10 @@ The backend uses a SQL database, storing essential data in multiple tables:
 
 ### Prerequisites
 
-- **Node.js** and **npm** for both frontend (mobile and web) development.
-- **Java 11+** for Spring Boot backend.
-- **PostgreSQL** database (or other SQL database).
-- **Expo CLI** for mobile app development.
+- **Flutter** SDK for mobile development.
+- **Node.js** and **npm** for backend and web application development.
+- **MySQL** database for data storage.
+- **Firebase** project for authentication and notifications.
 
 ### Backend Setup
 
@@ -136,34 +120,34 @@ The backend uses a SQL database, storing essential data in multiple tables:
    ```
 
 2. **Set up environment variables**:
-   Create a `.env` file in the backend directory with environment variables (database URL, API keys).
+   Create a `.env` file in the backend directory with environment variables (database URL, API keys, Firebase credentials).
 
 3. **Install dependencies**:
    ```bash
    cd backend
-   ./mvnw install
+   npm install
    ```
 
 4. **Run the backend server**:
    ```bash
-   ./mvnw spring-boot:run
+   npm start
    ```
 
-### Mobile App Setup
+### Mobile App Setup (Flutter)
 
-1. **Install dependencies**:
+1. **Install Flutter dependencies**:
    ```bash
    cd mobile
-   npm install
+   flutter pub get
    ```
 
 2. **Run the app**:
    ```bash
-   expo start
+   flutter run
    ```
 
 3. **View on mobile**:
-   - Use the Expo Go app to scan the QR code from the terminal/browser to load the mobile app.
+   - Use a physical device or an emulator to view the app.
 
 ### Web Application Setup
 
@@ -208,7 +192,3 @@ Contributions are welcome! To contribute:
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-<<<<<<< HEAD
->>>>>>> 0340cd90eca6268090b66417fc6bb2ded7f80c56
-=======
->>>>>>> 0340cd90eca6268090b66417fc6bb2ded7f80c56

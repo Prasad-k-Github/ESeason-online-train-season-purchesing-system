@@ -1,5 +1,7 @@
+// lib/main.dart
+
 import 'package:flutter/material.dart';
-import 'screens/login_page.dart';
+import 'screens/home_page.dart'; // Import HomePage
 
 void main() {
   runApp(MyApp());
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LoginPage(),
+      home: HomePage(), // Set HomePage as the initial screen
     );
   }
 }

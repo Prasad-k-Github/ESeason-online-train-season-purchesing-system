@@ -144,7 +144,6 @@ class _LoginPageState extends State<LoginPage> {
                         SizedBox(height: 16.0),
                         ElevatedButton(
                           onPressed: _login,
-                          child: Text('Login'),
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors
                                 .deepOrange, // Adjust color to match theme
@@ -152,6 +151,7 @@ class _LoginPageState extends State<LoginPage> {
                               borderRadius: BorderRadius.circular(12.0),
                             ),
                           ),
+                          child: Text('Login'),
                         ),
                         SizedBox(height: 8.0),
                         ElevatedButton.icon(

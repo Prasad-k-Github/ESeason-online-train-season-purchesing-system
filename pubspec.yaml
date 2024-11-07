@@ -22,7 +22,6 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
-  # Ensure the assets are listed correctly
   assets:
     # - assets/train_background.jpg
     - assets/train_logo.png

@@ -1,3 +1,4 @@
+import 'package:e_season/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:e_season/widgets/custom_button.dart';
@@ -53,8 +54,7 @@ class HomeScreen extends StatelessWidget {
                     child: Text(
                       'E - Season',
                       style: GoogleFonts.alumniSansInlineOne(
-                        fontSize: 45,
-                        fontWeight: FontWeight.bold,
+                        fontSize: 50,
                         color: Colors.white,
                       ),
                     ),
@@ -76,7 +76,11 @@ class HomeScreen extends StatelessWidget {
                     child: CustomButton(
                       text: 'Get Started',
                       onPressed: () {
-                        // Add your onPressed code here!
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const LoginScreen()),
+                        );
                       },
                     ),
                   ),

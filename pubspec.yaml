@@ -22,3 +22,5 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/train_background.jpeg
+    - assets/images/train_background_2.jpeg
+    - assets/images/google_logo.png

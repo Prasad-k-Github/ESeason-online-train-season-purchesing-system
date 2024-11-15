@@ -15,8 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        textTheme:
-            GoogleFonts.aleoTextTheme(), // Apply Aleo as the theme text font
+        textTheme: GoogleFonts.aleoTextTheme(),
         useMaterial3: true,
       ),
       home: const HomeScreen(),

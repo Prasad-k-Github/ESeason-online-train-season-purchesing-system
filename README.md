@@ -111,8 +111,8 @@ The backend uses **MySQL**, storing essential data in multiple tables:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/E-Season.git
-   cd E-Season
+   git clone https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system.git
+   cd e_season
    ```
 
 2. **Set up environment variables**:

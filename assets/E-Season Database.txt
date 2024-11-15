@@ -10,22 +10,13 @@ Government Passenger:-
 - Season_type(Weekly,Monthly,Three Months)
 
 Passenger:-
-- PassengerID(Primary key)
-- Name_Inirial
 - Full_Name
-- Address 
+- Address
+- NIC_No
 - Email
 - Phone_No
-- NIC_No
-- NIC_Issue_Date
-- Start_Station
-- End_Station
-- Class(1st,2nd,3rd)
-- Season_Start _Date
-- Season_End_date
 - Photohgraph
 - Signature
-- Status(Government,General)
 - Password
 
 Season:-

@@ -1,3 +1,5 @@
+import 'package:e_season/screens/dashboard_screen.dart';
+import 'package:e_season/screens/register_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/gestures.dart';
@@ -204,7 +206,12 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                           ),
                           onPressed: () {
-                            // Add your onPressed code here!
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => DashboardScreen(),
+                              ),
+                            );
                           },
                           child: Text(
                             'Login',
@@ -292,7 +299,13 @@ class _LoginScreenState extends State<LoginScreen> {
                                 ),
                               ),
                               onPressed: () {
-                                // Add your onPressed code here for general passenger signup!
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder:
+                                        (context) => const RegisterScreen(),
+                                  ),
+                                );
                               },
                               child: Text(
                                 'Sign Up as General Passenger',

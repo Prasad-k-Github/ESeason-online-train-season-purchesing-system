@@ -111,7 +111,6 @@ class DashboardScreen extends StatelessWidget {
         ),
         child: Icon(Icons.add, color: Colors.white),
       ),
-
       bottomNavigationBar: ClipRRect(
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(35.0),

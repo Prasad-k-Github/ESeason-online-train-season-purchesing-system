@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "853963655805",
+    "project_id": "e-season-e0f97",
+    "storage_bucket": "e-season-e0f97.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:853963655805:android:59dfe106bff54f8f8fbf14",
+        "android_client_info": {
+          "package_name": "com.example.e_season"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTJtayZTFYRvAOPzc2T9QJihjKIHaCVAE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

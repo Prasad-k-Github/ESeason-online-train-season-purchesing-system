@@ -1,7 +1,8 @@
-import 'package:e_season/screens/otp_verification_screen.dart';
+import 'package:e_season/services/firebase_service.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:e_season/utils/validation_utils.dart';
+import 'package:flutter/services.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -12,6 +13,62 @@ class RegisterScreen extends StatefulWidget {
 
 class _RegisterScreenState extends State<RegisterScreen> {
   final _formKey = GlobalKey<FormState>();
+
+  final TextEditingController _fullNameController = TextEditingController();
+  final TextEditingController _addressController = TextEditingController();
+  final TextEditingController _nicController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _phoneController = TextEditingController();
+
+  final FirebaseService _firebaseService = FirebaseService();
+
+  @override
+  void dispose() {
+    _fullNameController.dispose();
+    _addressController.dispose();
+    _nicController.dispose();
+    _emailController.dispose();
+    _phoneController.dispose();
+    super.dispose();
+  }
+
+  void _register() async {
+    if (_formKey.currentState!.validate()) {
+      try {
+        await _firebaseService.addPassenger(
+          fullName: _fullNameController.text,
+          address: _addressController.text,
+          nic: _nicController.text,
+          email: _emailController.text,
+          phone: _phoneController.text,
+        );
+        _showSnackbar('Data sent to Firebase successfully');
+      } catch (e) {
+        _showSnackbar('Error sending data to Firebase: $e');
+      }
+    }
+  }
+
+  void _showSnackbar(String message) {
+    final snackBar = SnackBar(
+      content: Row(
+        children: [
+          Expanded(child: Text(message)),
+          IconButton(
+            icon: Icon(Icons.copy),
+            onPressed: () {
+              Clipboard.setData(ClipboardData(text: message));
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(content: Text('Copied to clipboard')),
+              );
+            },
+          ),
+        ],
+      ),
+      duration: Duration(seconds: 5),
+    );
+    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -82,6 +139,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                         vertical: 8.0,
                                       ),
                                       child: TextFormField(
+                                        controller: _fullNameController,
                                         keyboardType: TextInputType.name,
                                         decoration: InputDecoration(
                                           labelText: 'Full Name',
@@ -145,13 +203,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                           ),
                                           focusedErrorBorder:
                                               OutlineInputBorder(
-                                                borderSide: BorderSide(
-                                                  color: Colors.red,
-                                                  width: 2.0,
-                                                ),
-                                                borderRadius:
-                                                    BorderRadius.circular(30.0),
-                                              ),
+                                            borderSide: BorderSide(
+                                              color: Colors.red,
+                                              width: 2.0,
+                                            ),
+                                            borderRadius:
+                                                BorderRadius.circular(30.0),
+                                          ),
                                         ),
                                         style: TextStyle(color: Colors.black),
                                         validator: ValidationUtils.validateName,
@@ -166,6 +224,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                         vertical: 8.0,
                                       ),
                                       child: TextFormField(
+                                        controller: _addressController,
                                         keyboardType:
                                             TextInputType.streetAddress,
                                         decoration: InputDecoration(
@@ -231,13 +290,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                           ),
                                           focusedErrorBorder:
                                               OutlineInputBorder(
-                                                borderSide: BorderSide(
-                                                  color: Colors.red,
-                                                  width: 2.0,
-                                                ),
-                                                borderRadius:
-                                                    BorderRadius.circular(30.0),
-                                              ),
+                                            borderSide: BorderSide(
+                                              color: Colors.red,
+                                              width: 2.0,
+                                            ),
+                                            borderRadius:
+                                                BorderRadius.circular(30.0),
+                                          ),
                                         ),
                                         style: TextStyle(color: Colors.black),
                                         validator:
@@ -253,6 +312,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                         vertical: 8.0,
                                       ),
                                       child: TextFormField(
+                                        controller: _nicController,
                                         keyboardType: TextInputType.text,
                                         decoration: InputDecoration(
                                           labelText: 'NIC no',
@@ -316,13 +376,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                           ),
                                           focusedErrorBorder:
                                               OutlineInputBorder(
-                                                borderSide: BorderSide(
-                                                  color: Colors.red,
-                                                  width: 2.0,
-                                                ),
-                                                borderRadius:
-                                                    BorderRadius.circular(30.0),
-                                              ),
+                                            borderSide: BorderSide(
+                                              color: Colors.red,
+                                              width: 2.0,
+                                            ),
+                                            borderRadius:
+                                                BorderRadius.circular(30.0),
+                                          ),
                                         ),
                                         style: TextStyle(color: Colors.black),
                                         validator: ValidationUtils.validateNIC,
@@ -337,6 +397,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                         vertical: 8.0,
                                       ),
                                       child: TextFormField(
+                                        controller: _emailController,
                                         keyboardType:
                                             TextInputType.emailAddress,
                                         decoration: InputDecoration(
@@ -401,13 +462,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                           ),
                                           focusedErrorBorder:
                                               OutlineInputBorder(
-                                                borderSide: BorderSide(
-                                                  color: Colors.red,
-                                                  width: 2.0,
-                                                ),
-                                                borderRadius:
-                                                    BorderRadius.circular(30.0),
-                                              ),
+                                            borderSide: BorderSide(
+                                              color: Colors.red,
+                                              width: 2.0,
+                                            ),
+                                            borderRadius:
+                                                BorderRadius.circular(30.0),
+                                          ),
                                         ),
                                         style: TextStyle(color: Colors.black),
                                         validator:
@@ -423,6 +484,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                         vertical: 8.0,
                                       ),
                                       child: TextFormField(
+                                        controller: _phoneController,
                                         keyboardType: TextInputType.phone,
                                         decoration: InputDecoration(
                                           labelText: 'Phone no',
@@ -486,13 +548,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                           ),
                                           focusedErrorBorder:
                                               OutlineInputBorder(
-                                                borderSide: BorderSide(
-                                                  color: Colors.red,
-                                                  width: 2.0,
-                                                ),
-                                                borderRadius:
-                                                    BorderRadius.circular(30.0),
-                                              ),
+                                            borderSide: BorderSide(
+                                              color: Colors.red,
+                                              width: 2.0,
+                                            ),
+                                            borderRadius:
+                                                BorderRadius.circular(30.0),
+                                          ),
                                         ),
                                         style: TextStyle(color: Colors.black),
                                         validator:
@@ -520,19 +582,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                             0.5,
                                           ),
                                         ),
-                                        onPressed: () {
-                                          if (_formKey.currentState!
-                                              .validate()) {
-                                            Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder:
-                                                    (context) =>
-                                                        const OTPVerificationScreen(),
-                                              ),
-                                            );
-                                          }
-                                        },
+                                        onPressed: _register,
                                         child: Text(
                                           'Next',
                                           style: TextStyle(

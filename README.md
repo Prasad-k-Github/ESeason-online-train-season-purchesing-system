@@ -225,7 +225,7 @@ Contributions are welcome! To contribute:
   </div>
 
   <div style="flex: 1 1 calc(33% - 20px); max-width: 300px;">
-    <img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Dashboard.jpg" alt="Dashboard Screen" style="width: 100%;">
+    <img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Dashboard.jpg" alt="Dashboard Screen" style="width: 300;">
     <p style="text-align: center;">Dashboard Screen</p>
   </div>
 

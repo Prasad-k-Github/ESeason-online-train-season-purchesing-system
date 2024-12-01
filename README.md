@@ -193,22 +193,22 @@ Contributions are welcome! To contribute:
 <img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Home.jpg" alt="Mobile Registration Screen" width="300">
 
 #### Login Screen
-<img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Home.jpg" alt="Mobile Registration Screen" width="300">
+<img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Login.jpg" alt="Mobile Registration Screen" width="300">
 
-#### Home Screen
-<img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Home.jpg" alt="Mobile Registration Screen" width="300">
+#### Registration options Screen
+<img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Signup%20Options.jpg" alt="Mobile Registration Screen" width="300">
 
-#### Home Screen
-<img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Home.jpg" alt="Mobile Registration Screen" width="300">
+#### Register Screen
+<img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Register.jpg" alt="Mobile Registration Screen" width="300">
 
-#### Home Screen
-<img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Home.jpg" alt="Mobile Registration Screen" width="300">
+#### Password Screen
+<img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Password%20screen.png" alt="Mobile Registration Screen" width="300">
 
-#### Home Screen
-<img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Home.jpg" alt="Mobile Registration Screen" width="300">
+#### OTP Verify Screen
+<img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/OTP%20verification.jpg" alt="Mobile Registration Screen" width="300">
 
-#### Home Screen
-<img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Home.jpg" alt="Mobile Registration Screen" width="300">
+#### Dashoard Screen
+<img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Dashboard.jpg" alt="Mobile Registration Screen" width="300">
 
 
 ## License

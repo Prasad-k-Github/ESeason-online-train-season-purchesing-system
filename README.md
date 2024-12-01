@@ -190,48 +190,26 @@ Contributions are welcome! To contribute:
 
 ### Mobile App
 
-### Mobile App Screens
+#### Home Screen
+<img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Home.jpg" alt="Mobile Registration Screen" width="300">
 
-<div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+#### Login Screen
+<img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Login.jpg" alt="Mobile Registration Screen" width="300">
 
-  <div style="flex: 1 1 calc(33% - 20px); max-width: 300px;">
-    <img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Home.jpg" alt="Home Screen" style="width: 100%;">
-    <p style="text-align: center;">Home Screen</p>
-  </div>
+#### Registration options Screen
+<img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Signup%20Options.jpg" alt="Mobile Registration Screen" width="300">
 
-  <div style="flex: 1 1 calc(33% - 20px); max-width: 300px;">
-    <img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Login.jpg" alt="Login Screen" style="width: 100%;">
-    <p style="text-align: center;">Login Screen</p>
-  </div>
+#### Register Screen
+<img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Register.jpg" alt="Mobile Registration Screen" width="300">
 
-  <div style="flex: 1 1 calc(33% - 20px); max-width: 300px;">
-    <img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Signup%20Options.jpg" alt="Registration Options Screen" style="width: 100%;">
-    <p style="text-align: center;">Registration Options Screen</p>
-  </div>
+#### Password Screen
+<img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Password%20screen.png" alt="Mobile Registration Screen" width="300">
 
-  <div style="flex: 1 1 calc(33% - 20px); max-width: 300px;">
-    <img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Register.jpg" alt="Register Screen" style="width: 100%;">
-    <p style="text-align: center;">Register Screen</p>
-  </div>
+#### OTP Verify Screen
+<img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/OTP%20verification.jpg" alt="Mobile Registration Screen" width="300">
 
-  <div style="flex: 1 1 calc(33% - 20px); max-width: 300px;">
-    <img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Password%20screen.png" alt="Password Screen" style="width: 100%;">
-    <p style="text-align: center;">Password Screen</p>
-  </div>
-
-  <div style="flex: 1 1 calc(33% - 20px); max-width: 300px;">
-    <img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/OTP%20verification.jpg" alt="OTP Verify Screen" style="width: 100%;">
-    <p style="text-align: center;">OTP Verify Screen</p>
-  </div>
-
-  <div style="flex: 1 1 calc(33% - 20px); max-width: 300px;">
-    <img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Dashboard.jpg" alt="Dashboard Screen" style="width: 300;">
-    <p style="text-align: center;">Dashboard Screen</p>
-  </div>
-
-</div>
-
-
+#### Dashoard Screen
+<img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Dashboard.jpg" alt="Mobile Registration Screen" width="300">
 
 ## License
 

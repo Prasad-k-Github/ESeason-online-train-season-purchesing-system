@@ -16,6 +16,7 @@
 - [Project Timeline](#project-timeline)
 - [Contributing](#contributing)
 - [License](#license)
+- [Interfaces](#Interfaces)
 
 ## Introduction
 

@@ -192,7 +192,7 @@ Contributions are welcome! To contribute:
 #### Home Screen
 <img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Home.jpg" alt="Mobile Registration Screen" width="300">
 
-#### Home Screen
+#### Login Screen
 <img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Home.jpg" alt="Mobile Registration Screen" width="300">
 
 #### Home Screen

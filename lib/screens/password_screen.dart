@@ -36,9 +36,9 @@ class _PasswordScreenState extends State<PasswordScreen> {
           email: widget.userData['email'],
           phone: widget.userData['phone'],
           password: _passwordController.text,
+          context: context,
         );
         _showSnackbar('Data stored successfully');
-        Navigator.popUntil(context, (route) => route.isFirst);
       } catch (e) {
         _showSnackbar('Error storing data: $e');
       }

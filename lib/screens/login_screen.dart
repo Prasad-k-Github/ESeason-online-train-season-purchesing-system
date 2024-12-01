@@ -1,8 +1,10 @@
-import 'package:e_season/screens/dashboard_screen.dart';
-import 'package:e_season/screens/register_screen.dart'; // Ensure this import is correct
+import 'package:e_season/screens/register_screen.dart';
+import 'package:e_season/services/firebase_service.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/gestures.dart';
+import 'package:e_season/utils/validation_utils.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -12,9 +14,58 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  final _formKey = GlobalKey<FormState>();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  final FirebaseService _firebaseService = FirebaseService();
   bool _isPasswordVisible = false;
   bool _isLogin = true;
   bool _isSignupOptions = false;
+
+  @override
+  void dispose() {
+    _emailController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
+
+  void _login() async {
+    if (_formKey.currentState!.validate()) {
+      try {
+        bool success = await _firebaseService.loginUser(
+          email: _emailController.text,
+          password: _passwordController.text,
+          context: context,
+        );
+        if (success) {
+          _showSnackbar('Login successful');
+        }
+      } catch (e) {
+        _showSnackbar('Error logging in: $e');
+      }
+    }
+  }
+
+  void _showSnackbar(String message) {
+    final snackBar = SnackBar(
+      content: Row(
+        children: [
+          Expanded(child: Text(message)),
+          IconButton(
+            icon: Icon(Icons.copy),
+            onPressed: () {
+              Clipboard.setData(ClipboardData(text: message));
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(content: Text('Copied to clipboard')),
+              );
+            },
+          ),
+        ],
+      ),
+      duration: Duration(seconds: 5),
+    );
+    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -78,73 +129,73 @@ class _LoginScreenState extends State<LoginScreen> {
                         child: Center(
                           child: Container(
                             width: 340, // Adjust the width of the text field
-                            child: TextField(
-                              decoration: InputDecoration(
-                                filled: true,
-                                fillColor: Colors.white.withOpacity(0.8),
-                                hintText: 'Email',
-                                prefixIcon: Icon(
-                                  Icons.email,
-                                  color: Colors.grey,
-                                ),
-                                border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(25.0),
-                                  borderSide: BorderSide.none,
-                                ),
-                                contentPadding: EdgeInsets.symmetric(
-                                  vertical: 15.0,
-                                  horizontal: 20.0,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(height: 20),
-
-                // Password Field
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: Center(
-                          child: Container(
-                            width: 340,
-                            child: TextField(
-                              obscureText: !_isPasswordVisible,
-                              decoration: InputDecoration(
-                                filled: true,
-                                fillColor: Colors.white.withOpacity(0.8),
-                                hintText: 'Password',
-                                prefixIcon: Icon(
-                                  Icons.lock,
-                                  color: Colors.grey,
-                                ),
-                                suffixIcon: IconButton(
-                                  icon: Icon(
-                                    _isPasswordVisible
-                                        ? Icons.visibility
-                                        : Icons.visibility_off,
-                                    color: Colors.grey,
+                            child: Form(
+                              key: _formKey,
+                              child: Column(
+                                children: [
+                                  TextFormField(
+                                    controller: _emailController,
+                                    decoration: InputDecoration(
+                                      filled: true,
+                                      fillColor: Colors.white.withOpacity(0.8),
+                                      hintText: 'Email',
+                                      prefixIcon: Icon(
+                                        Icons.email,
+                                        color: Colors.grey,
+                                      ),
+                                      border: OutlineInputBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(25.0),
+                                        borderSide: BorderSide.none,
+                                      ),
+                                      contentPadding: EdgeInsets.symmetric(
+                                        vertical: 15.0,
+                                        horizontal: 20.0,
+                                      ),
+                                    ),
+                                    validator: ValidationUtils.validateEmail,
                                   ),
-                                  onPressed: () {
-                                    setState(() {
-                                      _isPasswordVisible = !_isPasswordVisible;
-                                    });
-                                  },
-                                ),
-                                border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(25.0),
-                                  borderSide: BorderSide.none,
-                                ),
-                                contentPadding: EdgeInsets.symmetric(
-                                  vertical: 15.0,
-                                  horizontal: 20.0,
-                                ),
+                                  SizedBox(height: 20),
+
+                                  // Password Field
+                                  TextFormField(
+                                    controller: _passwordController,
+                                    obscureText: !_isPasswordVisible,
+                                    decoration: InputDecoration(
+                                      filled: true,
+                                      fillColor: Colors.white.withOpacity(0.8),
+                                      hintText: 'Password',
+                                      prefixIcon: Icon(
+                                        Icons.lock,
+                                        color: Colors.grey,
+                                      ),
+                                      suffixIcon: IconButton(
+                                        icon: Icon(
+                                          _isPasswordVisible
+                                              ? Icons.visibility
+                                              : Icons.visibility_off,
+                                          color: Colors.grey,
+                                        ),
+                                        onPressed: () {
+                                          setState(() {
+                                            _isPasswordVisible =
+                                                !_isPasswordVisible;
+                                          });
+                                        },
+                                      ),
+                                      border: OutlineInputBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(25.0),
+                                        borderSide: BorderSide.none,
+                                      ),
+                                      contentPadding: EdgeInsets.symmetric(
+                                        vertical: 15.0,
+                                        horizontal: 20.0,
+                                      ),
+                                    ),
+                                    validator: ValidationUtils.validatePassword,
+                                  ),
+                                ],
                               ),
                             ),
                           ),
@@ -212,14 +263,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 borderRadius: BorderRadius.circular(25.0),
                               ),
                             ),
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => DashboardScreen(),
-                                ),
-                              );
-                            },
+                            onPressed: _login,
                             child: Text(
                               'Login',
                               style: TextStyle(

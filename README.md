@@ -192,19 +192,23 @@ Contributions are welcome! To contribute:
 #### Home Screen
 <img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Home.jpg" alt="Mobile Registration Screen" width="300">
 
-#### Ticket Purchase
-![Ticket Purchase Flow](assets/screenshots/mobile_ticket_purchase.png)
+#### Home Screen
+<img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Home.jpg" alt="Mobile Registration Screen" width="300">
 
-#### Digital Ticket Validation
-![Digital Ticket Validation](assets/screenshots/mobile_ticket_validation.png)
+#### Home Screen
+<img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Home.jpg" alt="Mobile Registration Screen" width="300">
 
-### Web Application
+#### Home Screen
+<img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Home.jpg" alt="Mobile Registration Screen" width="300">
 
-#### Admin Dashboard
-![Admin Dashboard](assets/screenshots/web_dashboard.png)
+#### Home Screen
+<img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Home.jpg" alt="Mobile Registration Screen" width="300">
 
-#### Ticket Management
-![Ticket Management](assets/screenshots/web_ticket_management.png)
+#### Home Screen
+<img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Home.jpg" alt="Mobile Registration Screen" width="300">
+
+#### Home Screen
+<img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Home.jpg" alt="Mobile Registration Screen" width="300">
 
 
 ## License

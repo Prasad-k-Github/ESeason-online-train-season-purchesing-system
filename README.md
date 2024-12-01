@@ -190,7 +190,7 @@ Contributions are welcome! To contribute:
 ### Mobile App
 
 #### Registration Screen
-![Mobile Registration Screen](assets/screenshots/mobile_registration.png)
+![Mobile Registration Screen](https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Home.jpg)
 
 #### Ticket Purchase
 ![Ticket Purchase Flow](assets/screenshots/mobile_ticket_purchase.png)

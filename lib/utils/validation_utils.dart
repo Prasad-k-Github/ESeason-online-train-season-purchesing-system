@@ -19,7 +19,7 @@ class ValidationUtils {
     if (value == null || value.isEmpty) {
       return 'NIC number is required';
     }
-
+    // Add more complex validation if needed
     return null;
   }
 
@@ -52,9 +52,10 @@ class ValidationUtils {
     if (value.length < 8) {
       return 'Password must be at least 8 characters long';
     }
-    final passwordRegex = RegExp(r'^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$');
+    final passwordRegex = RegExp(
+        r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$');
     if (!passwordRegex.hasMatch(value)) {
-      return 'Password must contain at least one letter and number';
+      return 'Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character';
     }
     return null;
   }

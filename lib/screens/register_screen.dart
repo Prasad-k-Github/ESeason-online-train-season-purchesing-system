@@ -21,8 +21,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _phoneController = TextEditingController();
 
-  final FirebaseService _firebaseService = FirebaseService();
-
   @override
   void dispose() {
     _fullNameController.dispose();
@@ -33,26 +31,22 @@ class _RegisterScreenState extends State<RegisterScreen> {
     super.dispose();
   }
 
-  void _register() async {
+  void _register() {
     if (_formKey.currentState!.validate()) {
-      try {
-        await _firebaseService.addPassenger(
-          fullName: _fullNameController.text,
-          address: _addressController.text,
-          nic: _nicController.text,
-          email: _emailController.text,
-          phone: _phoneController.text,
-        );
-        _showSnackbar('Data sent to Firebase successfully');
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => PasswordScreen(),
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => PasswordScreen(
+            userData: {
+              'fullName': _fullNameController.text,
+              'address': _addressController.text,
+              'nic': _nicController.text,
+              'email': _emailController.text,
+              'phone': _phoneController.text,
+            },
           ),
-        );
-      } catch (e) {
-        _showSnackbar('Error sending data to Firebase: $e');
-      }
+        ),
+      );
     }
   }
 

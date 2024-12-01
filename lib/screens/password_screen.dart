@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:e_season/utils/validation_utils.dart';
-
-void main() {
-  runApp(const PasswordScreen());
-}
+import 'package:e_season/services/firebase_service.dart';
+import 'package:flutter/services.dart';
 
 class PasswordScreen extends StatefulWidget {
-  const PasswordScreen({Key? key}) : super(key: key);
+  final Map<String, dynamic> userData;
+
+  const PasswordScreen({Key? key, required this.userData}) : super(key: key);
 
   @override
   _PasswordScreenState createState() => _PasswordScreenState();
@@ -17,6 +17,7 @@ class _PasswordScreenState extends State<PasswordScreen> {
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _confirmPasswordController =
       TextEditingController();
+  final FirebaseService _firebaseService = FirebaseService();
 
   @override
   void dispose() {
@@ -25,10 +26,44 @@ class _PasswordScreenState extends State<PasswordScreen> {
     super.dispose();
   }
 
-  void _submit() {
+  void _submit() async {
     if (_formKey.currentState!.validate()) {
-      // Handle password submission logic here
+      try {
+        await _firebaseService.addPassenger(
+          fullName: widget.userData['fullName'],
+          address: widget.userData['address'],
+          nic: widget.userData['nic'],
+          email: widget.userData['email'],
+          phone: widget.userData['phone'],
+          password: _passwordController.text,
+        );
+        _showSnackbar('Data stored successfully');
+        Navigator.popUntil(context, (route) => route.isFirst);
+      } catch (e) {
+        _showSnackbar('Error storing data: $e');
+      }
     }
+  }
+
+  void _showSnackbar(String message) {
+    final snackBar = SnackBar(
+      content: Row(
+        children: [
+          Expanded(child: Text(message)),
+          IconButton(
+            icon: Icon(Icons.copy),
+            onPressed: () {
+              Clipboard.setData(ClipboardData(text: message));
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(content: Text('Copied to clipboard')),
+              );
+            },
+          ),
+        ],
+      ),
+      duration: Duration(seconds: 5),
+    );
+    ScaffoldMessenger.of(context).showSnackBar(snackBar);
   }
 
   @override

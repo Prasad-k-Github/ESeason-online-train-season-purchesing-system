@@ -1,6 +1,7 @@
 // lib/services/firebase_service.dart
 
 import 'package:firebase_database/firebase_database.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class FirebaseService {
   final DatabaseReference _databaseReference =
@@ -12,15 +13,26 @@ class FirebaseService {
     required String nic,
     required String email,
     required String phone,
+    required String password,
   }) async {
     try {
-      await _databaseReference.child('general_passenger').push().set({
+      // Create a new user with email and password
+      UserCredential userCredential =
+          await FirebaseAuth.instance.createUserWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+
+      // Store additional user data in the database
+      await _databaseReference
+          .child('general_passenger')
+          .child(userCredential.user!.uid)
+          .set({
         'fullName': fullName,
         'address': address,
         'nic': nic,
         'email': email,
         'phone': phone,
-        'otpVerified': false,
         'createdAt': DateTime.now().toIso8601String(),
       });
     } catch (e) {

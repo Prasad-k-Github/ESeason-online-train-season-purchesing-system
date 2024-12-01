@@ -19,7 +19,7 @@ class ValidationUtils {
     if (value == null || value.isEmpty) {
       return 'NIC number is required';
     }
-    // Add more complex validation if needed
+
     return null;
   }
 
@@ -41,6 +41,31 @@ class ValidationUtils {
     final phoneRegex = RegExp(r'^\+?[0-9]{10,15}$');
     if (!phoneRegex.hasMatch(value)) {
       return 'Enter a valid phone number';
+    }
+    return null;
+  }
+
+  static String? validatePassword(String? value) {
+    if (value == null || value.isEmpty) {
+      return 'Password is required';
+    }
+    if (value.length < 8) {
+      return 'Password must be at least 8 characters long';
+    }
+    final passwordRegex = RegExp(r'^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$');
+    if (!passwordRegex.hasMatch(value)) {
+      return 'Password must contain at least one letter and number';
+    }
+    return null;
+  }
+
+  static String? validateConfirmPassword(
+      String? password, String? confirmPassword) {
+    if (confirmPassword == null || confirmPassword.isEmpty) {
+      return 'Confirm Password is required';
+    }
+    if (password != confirmPassword) {
+      return 'Passwords do not match';
     }
     return null;
   }

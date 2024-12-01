@@ -1,5 +1,5 @@
 import 'package:e_season/screens/dashboard_screen.dart';
-import 'package:e_season/screens/register_screen.dart';
+import 'package:e_season/screens/register_screen.dart'; // Ensure this import is correct
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/gestures.dart';
@@ -54,8 +54,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         _isLogin
                             ? 'Login'
                             : _isSignupOptions
-                            ? 'Sign Up'
-                            : 'Sign Up',
+                                ? 'Sign Up'
+                                : 'Sign Up',
                         style: GoogleFonts.alumniSansInlineOne(
                           fontSize: 50,
                           color: Colors.white,
@@ -178,11 +178,10 @@ class _LoginScreenState extends State<LoginScreen> {
                                     fontSize: 18,
                                     decoration: TextDecoration.underline,
                                   ),
-                                  recognizer:
-                                      TapGestureRecognizer()
-                                        ..onTap = () {
-                                          // onPressed logic
-                                        },
+                                  recognizer: TapGestureRecognizer()
+                                    ..onTap = () {
+                                      // onPressed logic
+                                    },
                                 ),
                               ],
                             ),
@@ -310,8 +309,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                      builder:
-                                          (context) => const RegisterScreen(),
+                                      builder: (context) =>
+                                          const RegisterScreen(),
                                     ),
                                   );
                                 },

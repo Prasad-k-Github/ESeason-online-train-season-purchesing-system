@@ -185,6 +185,28 @@ Contributions are welcome! To contribute:
 - Add comments to clarify complex code sections.
 - Test any new features thoroughly.
 
+## Screenshots
+
+### Mobile App
+
+#### Registration Screen
+![Mobile Registration Screen](assets/screenshots/mobile_registration.png)
+
+#### Ticket Purchase
+![Ticket Purchase Flow](assets/screenshots/mobile_ticket_purchase.png)
+
+#### Digital Ticket Validation
+![Digital Ticket Validation](assets/screenshots/mobile_ticket_validation.png)
+
+### Web Application
+
+#### Admin Dashboard
+![Admin Dashboard](assets/screenshots/web_dashboard.png)
+
+#### Ticket Management
+![Ticket Management](assets/screenshots/web_ticket_management.png)
+
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

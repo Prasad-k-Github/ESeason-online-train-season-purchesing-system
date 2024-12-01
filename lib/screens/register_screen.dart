@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:e_season/utils/validation_utils.dart';
 import 'package:flutter/services.dart';
+import 'package:e_season/screens/password_screen.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -43,6 +44,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
           phone: _phoneController.text,
         );
         _showSnackbar('Data sent to Firebase successfully');
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => PasswordScreen(),
+          ),
+        );
       } catch (e) {
         _showSnackbar('Error sending data to Firebase: $e');
       }

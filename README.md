@@ -185,12 +185,11 @@ Contributions are welcome! To contribute:
 - Add comments to clarify complex code sections.
 - Test any new features thoroughly.
 
-## Screenshots
+## Interfaces
 
 ### Mobile App
 
-#### Registration Screen
-![Mobile Registration Screen]
+#### Home Screen
 <img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Home.jpg" alt="Mobile Registration Screen" width="300">
 
 #### Ticket Purchase

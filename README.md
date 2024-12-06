@@ -16,6 +16,7 @@
 - [Project Timeline](#project-timeline)
 - [Contributing](#contributing)
 - [License](#license)
+- [Interfaces](#Interfaces)
 
 ## Introduction
 
@@ -185,27 +186,30 @@ Contributions are welcome! To contribute:
 - Add comments to clarify complex code sections.
 - Test any new features thoroughly.
 
-## Screenshots
+## Interfaces
 
 ### Mobile App
 
-#### Registration Screen
-![Mobile Registration Screen](assets/screenshots/mobile_registration.png)
+#### Home Screen
+<img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Home.jpg" alt="Mobile Registration Screen" width="300">
 
-#### Ticket Purchase
-![Ticket Purchase Flow](assets/screenshots/mobile_ticket_purchase.png)
+#### Login Screen
+<img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Login.jpg" alt="Mobile Registration Screen" width="300">
 
-#### Digital Ticket Validation
-![Digital Ticket Validation](assets/screenshots/mobile_ticket_validation.png)
+#### Registration options Screen
+<img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Signup%20Options.jpg" alt="Mobile Registration Screen" width="300">
 
-### Web Application
+#### Register Screen
+<img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Register.jpg" alt="Mobile Registration Screen" width="300">
 
-#### Admin Dashboard
-![Admin Dashboard](assets/screenshots/web_dashboard.png)
+#### Password Screen
+<img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Password%20screen.png" alt="Mobile Registration Screen" width="300">
 
-#### Ticket Management
-![Ticket Management](assets/screenshots/web_ticket_management.png)
+#### OTP Verify Screen
+<img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/OTP%20verification.jpg" alt="Mobile Registration Screen" width="300">
 
+#### Dashoard Screen
+<img src="https://github.com/Prasad-k-Github/ESeason-online-train-season-purchesing-system/blob/main/assets/images/Dashboard.jpg" alt="Mobile Registration Screen" width="300">
 
 ## License
 

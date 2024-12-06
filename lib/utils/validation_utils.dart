@@ -19,7 +19,7 @@ class ValidationUtils {
     if (value == null || value.isEmpty) {
       return 'NIC number is required';
     }
-    // Add more complex validation if needed
+
     return null;
   }
 

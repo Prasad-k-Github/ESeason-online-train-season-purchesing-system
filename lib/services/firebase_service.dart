@@ -33,7 +33,6 @@ class FirebaseService {
         'createdAt': DateTime.now().toIso8601String(),
       });
 
-      // Navigate to DashboardScreen
       Navigator.pushReplacementNamed(context, '/dashboard');
     } catch (e) {
       print('Error adding passenger: $e');
@@ -66,7 +65,6 @@ class FirebaseService {
         userData.forEach((key, value) {
           if (value['password'] == hashedPassword) {
             isValidUser = true;
-            // Navigate to DashboardScreen
             Navigator.pushReplacementNamed(context, '/dashboard');
           }
         });
@@ -84,8 +82,8 @@ class FirebaseService {
   }
 
   String _hashPassword(String password) {
-    final bytes = utf8.encode(password); // Convert password to bytes
-    final digest = sha256.convert(bytes); // Hash the password using SHA-256
-    return digest.toString(); // Convert the hash to a string
+    final bytes = utf8.encode(password);
+    final digest = sha256.convert(bytes);
+    return digest.toString();
   }
 }

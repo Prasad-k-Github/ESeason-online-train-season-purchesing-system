@@ -43,12 +43,10 @@ flutter {
 }
 
 dependencies {
-    // Import the Firebase BoM
     implementation(platform("com.google.firebase:firebase-bom:33.6.0"))
-
-    // Add the dependencies for the Firebase products you want to use
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-auth")
     implementation("com.google.firebase:firebase-firestore")
-    implementation("com.google.firebase:firebase-database") // Add this line for Realtime Database
+    implementation("com.google.firebase:firebase-database") // Realtime Database
+    implementation("com.google.android.gms:play-services-auth:20.0.0") // Google Sign-In
 }

@@ -1,8 +1,10 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:e_season/utils/validation_utils.dart';
 import 'package:flutter/services.dart';
 import 'package:e_season/screens/password_screen.dart';
+import 'package:e_season/services/firebase_service.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -19,6 +21,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
   final TextEditingController _nicController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _phoneController = TextEditingController();
+
+  final FirebaseService _firebaseService = FirebaseService();
 
   @override
   void dispose() {
@@ -46,6 +50,18 @@ class _RegisterScreenState extends State<RegisterScreen> {
           ),
         ),
       );
+    }
+  }
+
+  void _registerWithGoogle() async {
+    try {
+      User? user = await _firebaseService.signInWithGoogle();
+      if (user != null) {
+        _showSnackbar('Registration with Google successful');
+        Navigator.pushReplacementNamed(context, '/dashboard');
+      }
+    } catch (e) {
+      _showSnackbar('Error registering with Google: $e');
     }
   }
 
@@ -664,9 +680,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                           width: 30,
                                           height: 30,
                                         ),
-                                        onPressed: () {
-                                          // onPressed logic!
-                                        },
+                                        onPressed: _registerWithGoogle,
                                       ),
                                     ),
                                   ),
